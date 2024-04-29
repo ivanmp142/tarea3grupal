@@ -1,0 +1,683 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+}
+
+/*Estilos para el header y la barra de navegación*/
+header {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    background-color: #a9d302;
+}
+
+nav {
+    background-color: black;
+    position: static;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .navbar {
+    position: relative;
+    display: flex;
+    margin-top: 0px;
+}
+
+nav .navbar > li {
+    position: relative;
+    list-style: none;
+    width: 200px;
+    padding: 10px;
+    margin: 0 25px;
+}
+
+nav .navbar > li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav .navbar > li a:hover {
+    color: #a9d302;
+    font-weight: 450;
+    text-decoration: underline;
+}
+
+/*Estilos para el menú desplegable*/
+nav .navbar .desplegable {
+    display: none;
+    position: absolute;
+    list-style: none;
+    width: max-content;
+    background-color: #d4ddb1;
+    text-align: left;
+    z-index: 200;
+}
+
+nav .navbar .desplegable li {
+    padding: 15px;
+}
+
+nav .navbar > li .desplegable li:nth-child(2n) {
+    background-color: #adb58d; /*Cambia el color de fondo de las opciones pares*/
+}
+
+nav .navbar > li:nth-child(2) .desplegable { /*Para centrar el menú desplegable debajo de comic (que es el li=2)*/
+    left: 0%;
+}
+
+nav .navbar > li:nth-child(3) .desplegable { /*Para centrar el menú desplegable debajo de merchandising (que es el li=3)*/
+    left: -25%;
+}
+
+nav .navbar > li:hover .desplegable {
+    display: block;
+}
+
+nav .navbar .desplegable a {
+    font-weight: 400;
+    color: black;
+    text-decoration: none;
+}
+
+nav .navbar .desplegable a:hover {
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+}
+
+/*Estilos de index*/
+#main {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 100px;
+}
+
+#content {
+    width: 75%;
+    z-index: -5;
+}
+
+.publicidad {
+    text-align: center;
+    margin: 50px;
+}
+
+.publicidad img {
+    width: 98%;
+}
+
+#secciones {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.seccion {
+    width: 250px;
+    height: auto;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.seccion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.seccion p {
+    position: absolute;
+    font-family: "Bangers";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*Esta etiqueta mueve el posicionamiento del contenido en el eje x y el eje y. Así podemos centrar el contenido en su caja.*/
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+}
+
+#noticias {
+    text-align: center;
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.noticia {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.noticia img {
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+}
+
+.texto-noticia {
+    flex: content; /*Esta etiqueta estira el contenedor para evitar el desbordamiento*/
+}
+
+/*Estilos de novedades*/
+
+.secnovedades{
+    display: flex;
+    margin:20px 20px;
+    align-items: center;
+    padding: 20px 20px;   
+}
+.novedades{
+    margin:0 9%;
+    width: 100%; 
+}
+.novedad{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;   
+}
+.novedad a img{
+    width: 240px;
+    height: 240px;
+    margin: 20px;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    box-shadow:0 0 10px darkgrey;
+    border: 3px solid azure;
+}
+.texto-novedad{
+    font-family:"Bangers";
+    font-size: 1.2em;
+    text-align:justify;
+    max-width: 85%;
+    height: auto;
+    justify-content: space-between;
+}
+.secnovedades:hover .novedad{
+    opacity: 0.7;
+    transform: scale(0.7);
+    transition:2s;
+}
+.secnovedades:hover .novedad:hover{
+    opacity: 1;
+    transform: scale(1);
+    transition:2s;
+}
+
+/*Estilos de comics y merchandising*/
+#galeria {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    margin: 0% 5% 5% 5%;
+}
+
+.imagen_galeria {
+    width: 15%;
+    height: auto;
+    margin: 4% 5%;
+    position: relative;
+}
+
+.imagen_galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imagen_galeria h4 {
+    font-family: "Montserrat";
+    margin-top: 15px;
+    color: black;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.imagen_galeria p {
+    font-family: "Montserrat";
+    margin-top: 10px;
+    color: black;
+    text-align: center;
+    font-size: 1em;
+}
+
+.imagen_galeria img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 16px #a9d302;
+    transition: 1s;
+}
+
+/*Estilos Noticias*/
+.titulo{
+    font-family: "Bangers";
+    font-size: 20px;
+    color: black;
+    align-content: center;
+    margin-bottom: 5%;
+}
+section div h3{
+    font-weight: 600;
+    color: white;
+    margin-top: 4px;
+}
+section div h4{
+    font-weight: bolder;
+    font-size: 24px;
+}
+.subtitulo{
+    background-color: #adb58d;
+    color: white;
+    height: 55px;
+}
+.container:after{
+    content:"";
+    display: block;
+    height: 0px;
+    clear: both;
+}
+.imgnot{
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 5px 5px rgba(3, 32, 51, .8);
+}
+.container {
+    width: 90%;
+    margin: 0 8%;
+    margin-top: 5%;
+}
+.container div{
+    width: 29%;
+    height: auto;
+    display: inline;
+    float: left;
+    margin:0% 4% 0% 0%;
+    padding:0px;
+}
+span{
+    font-size: small;
+    font-style: italic;
+}
+p{
+    margin: auto;
+    font-size-adjust: initial;
+    margin-top: 10px;
+    text-align: left;
+}
+.vinculo{
+    text-decoration: none;
+}
+.vinculo:hover{
+    color: rgb(255, 0, 0);
+    transition: 0.5s;
+}
+/*Estilos páginas anexas*/
+.imgblog{
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 3px 5px 5px rgba(3, 32, 51, .8);
+}
+section div h2{
+    color: black;
+    margin-top: 15px;
+    font-weight: bolder;
+}
+.cont_b{
+    color: black;
+    text-align: left;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 5%;
+}
+#sub1{
+    color: black;
+    text-align: center;
+    font-size: 30px;
+}
+.sub_sub{
+    text-align: left;
+    color: black;
+}
+section div .video{
+    margin-left: -150px;
+}
+
+/*Estilos para donde estamos */
+.dondeestamos{
+    width: 100%;
+    position: absolute;
+}
+.dondeestamos img{
+    z-index: -1000; 
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    margin:0px 0px 0px 0px;
+}
+.dondeestamos iframe{
+    max-width: 31em;
+    max-height:31em ;
+    top:350px;
+    margin-left: -160px;
+    position:absolute;
+}
+.dondeestamos h1{
+    color:white;
+    font-size: 74px;
+    font-weight: 4.4em;
+    max-width: 31em;
+    max-height:31em ;
+    top:120px;
+    margin-left: 400px;
+    position:absolute;
+    font-family:"Bangers";
+}
+.dondeestamos h2{
+    color:white;
+    font-size: 34px;
+    font-weight: 4.4em;
+    max-width: 31em;
+    max-height:31em ;
+    top:840px;
+    margin-left: 590px;
+    position:absolute;
+    font-family:"Bangers";
+}
+.secdonde{
+    margin:0px;
+    padding: 0px;
+    width: auto;
+    display: flex;
+}
+.secdonde article{
+    width: 400px;
+    height: 400px;
+    border: 5px solid white;
+    background-color: #a9d302;
+    margin-top: 400px;
+    margin-left: 120px;
+    border-radius: 50%;
+    z-index: 100;
+
+}
+.secdonde article h1{
+   
+    display:block;
+    font-family:"Bangers";
+    font-size: 44px;
+    font-weight: 4.4em;
+    color:white;
+}
+.secdonde article a img{
+    width: 160px;
+    height: 160px;
+    margin: 5px;
+    padding:5px;
+    display:inline-flexbox;
+}
+
+/*Estilo para Contacto */
+
+div .caja{
+    margin: auto;
+}
+
+form{
+    margin-left: 25%;
+    margin-top: 25px;
+    font-size: 20px;
+    width: 50%;
+    padding: 2%;
+}
+fieldset{
+    
+    margin-top: 20px;
+    /* width: 600px; */
+    border-color: transparent;   
+}
+.caja{
+    background-color: #a9d302;
+    border-radius: 15px;
+    color: white;
+}
+
+.boton{
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+#cabeceraLegendMain{
+    color:white;
+    background-color: #a9d302;
+    font-style: italic; 
+    font-size: x-large;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/*Estilos para el footer*/
+footer {
+    background-color: #a9d302;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    z-index: 999;
+}
+
+footer p {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+    margin-left: 50px;
+}
+
+footer .rrss {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+ion-icon {
+    font-size: 30px;
+    color: white;
+    margin-right: 30px;
+}
+
+/*Estilos Redes sociales*/
+
+.baby_yoda {
+    float: right;
+    width: 30%;
+    height: auto;
+    margin-top: 5%;
+    margin-right: 10%;
+}
+
+.lo_siento {
+    font-family: "Bangers";
+    font-size: 4em;
+    text-align: center;
+    padding-top: 10%;
+}
+
+
+/* Estilos para dispositivos mas pequeños*/
+@media screen and (max-width: 996px) {
+
+    header {
+        width: 100%;
+        height: auto;
+    }
+
+    nav {
+        width: auto;
+    }
+    
+    nav .navbar {
+        width: auto;
+        justify-self: center;
+        align-items: center;
+        background-color: black;
+    }
+
+    nav .navbar > li {
+        width: 100px;
+        padding: 5px;
+        margin: 0 15px;
+    }
+    
+    nav .navbar > li a {
+        font-size: 0.8em;
+    }
+
+    #content {
+        width: 100%
+    }
+
+    .publicidad {
+        display: none;
+    }
+
+    #noticias {
+        display: none;
+    }
+
+    .secnovedades{
+        display: flex;
+        flex-wrap: wrap;  
+    }
+
+    .imagen_galeria {
+        width: 40%;
+        margin-bottom: 15%;
+    }
+
+    .titulo{
+        margin-left: 25%;
+    }
+
+    .container div{
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+
+/* Estilos para dispositivos mas pequeños*/
+@media screen and (max-width: 768px) {
+
+    header {
+        width: 100vh;
+        height: auto;
+    }
+
+    nav {
+        width: 100%;
+        margin: 0% 17%;
+    }
+
+    nav .navbar {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    nav .navbar > li {
+        justify-content: center;
+        width: 100px;
+        padding: 5px;
+        margin: 0 15px;
+    }
+    
+    nav .navbar > li a {
+        font-size: 0.8em;
+    }
+
+    .publicidad {
+        display: none;
+    }
+
+    #noticias {
+        display: none;
+    }
+
+    #content {
+        width: 100%
+    }
+
+    #secciones {
+        display: block;
+    }
+
+    .seccion {
+        width: 80%;
+        height: 150px;
+        margin-left: 25%;
+    }
+
+    .seccion p {
+        font-size: 1.5em;
+    }
+
+    .baby-yoda {
+        display: none;
+    }
+
+    .secnovedades{
+        display: flex;
+        flex-wrap: wrap;  
+    }
+
+    .imagen_galeria {
+        width: 40%;
+        margin-bottom: 15%;
+    }
+
+    .titulo{
+        margin-left: 25%;
+    }
+
+    .container div{
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+}
